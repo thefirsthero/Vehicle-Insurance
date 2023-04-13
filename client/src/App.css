@@ -1,94 +1,81 @@
-form {
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formContainer {
+  width: 23rem;
+  height: 31rem;
+  border-radius: 7px;
+  background: rgb(102, 150, 206);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 /
+          0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 30%;
-  margin: 0 auto;
+  align-items: center;
 }
-
-input[type="submit"] {
-  cursor: pointer;
-  padding: 7px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  width: 94%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+span {
+  color: rgb(88, 57, 57);
+  font-weight: 700;
 }
-
-.front-page {
-  margin: 20% auto;
-}
-
-a,
-a:visited,
-a:active {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.input-label {
-  font-size: 10px;
-  margin: 0 0 0 10px;
-}
-
-.checkbox-label {
-  font-size: 10px;
-}
-
-.checkbox-label > input {
-  width: 15px;
-}
-
-form > * {
-  margin: 10px;
-}
-
-h1 {
-  text-align: center;
-}
-
-select {
-  width: 94%;
-  padding: 10px 2px;
-}
-
-input {
-  width: 90%;
-}
-
-.profile {
-  margin: auto;
-  font-size: 10px;
-  display: flex;
-  justify-content: space-between;
+form * {
+  margin-bottom: 0.5rem;
   width: 100%;
 }
-
-.logout-btn {
-  padding: 0;
-  font-size: 10px;
+hr {
+  width: 100%;
+  height: 2px;
+  background: #333;
+  border: 0;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
 }
-
-.logout-btn {
-  height: 20px;
-  width: 40px;
-  margin: 17px;
+input {
+  height: 2rem;
+  padding: 0.5rem;
 }
-
-.login-err {
-  display: none;
+input:focus,
+input:active {
+  outline: rgb(65, 65, 172);
 }
-
-.active {
-  display: block;
-  font-size: 8px;
-  margin: 0 0 3px 10px;
-  color: rgb(255, 12, 24);
+.btn:active {
+  transform: scale(0.98);
+}
+.btn {
+  font-weight: 500;
+}
+label {
+  margin-bottom: 1rem;
+}
+.formContainer p {
+  width: 100%;
+  height: 3rem;
+  border-radius: 7px;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 /
+          0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.negative {
+  background-color: red;
+}
+.positive {
+  background-color: green;
 }
