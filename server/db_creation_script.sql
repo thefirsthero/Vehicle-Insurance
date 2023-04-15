@@ -1,7 +1,7 @@
 -- Table structure for table `users`
 --
 CREATE TABLE `users` (
-`user_id_number` int NOT NULL,
+`user_id_number` bigint NOT NULL,
 `user_name` varchar(45) NOT NULL,
 `user_surname` varchar(45) NOT NULL,
 `user_email` varchar(100) NOT NULL,
