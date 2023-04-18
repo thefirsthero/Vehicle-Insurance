@@ -1,5 +1,7 @@
 # Vehicle Insurance Project
-...(add to this)
+This Insurance Management System project is a website or web application mainly for persons who are willing to buy insurance for their vehicles. Through this website, it will be easier to find a suitable one.
+The main intention of building this website is to provide users to choose their budget and the best package for their vehicle. We have tried to maintain all the information about the insurance plan, which is easily understandable to the users and makes it easy to find the plan.
+This system helps the user to get a different kind of insurance
 
 # Setup
   * Navigate to `server/src/config/db.config.js`
