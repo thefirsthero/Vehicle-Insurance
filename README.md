@@ -2,8 +2,6 @@
 ...(add to this)
 
 # Setup
-  * Navigate to `server/src/config/db.config.js`
-  * Set your database connection parameters.
   * In the root folder create a file called `.env` and make it look like this:
   * * REACT_APP_HOST=localhost (NB: change to your credentials)
   * * REACT_APP_USER=root (NB: change to your credentials)
