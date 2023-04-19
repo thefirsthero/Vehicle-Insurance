@@ -1,3 +1,5 @@
+CREATE DATABASE register_login_sys;
+USE register_login_sys;
 -- Table structure for table `users`
 --
 CREATE TABLE `users` (
