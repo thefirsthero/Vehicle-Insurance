@@ -5,7 +5,7 @@ const ENV_DB = process.env.REACT_APP_DB;
 
 module.exports = {
     HOST: ENV_HOST,
-    USER: 'root',
-    PASSWORD: '@Jean197119711',
-    DB: 'login_register_sys'
+    USER: ENV_USER,
+    PASSWORD: ENV_PASS,
+    DB: ENV_DB
 };
