@@ -1,11 +1,13 @@
-const ENV_HOST = process.env.REACT_APP_HOST;
-const ENV_USER = process.env.REACT_APP_USER;
-const ENV_PASS = process.env.REACT_APP_PASS;
-const ENV_DB = process.env.REACT_APP_DB;
+// const ENV_HOST = process.env.REACT_APP_HOST;
+// const ENV_USER = process.env.REACT_APP_USER;
+// const ENV_PASS = process.env.REACT_APP_PASS;
+// const ENV_DB = process.env.REACT_APP_DB; 
+
+// struggling to get environemnt variables working
 
 module.exports = {
-    HOST: ENV_HOST,
-    USER: ENV_USER,
-    PASSWORD: ENV_PASS,
-    DB: ENV_DB
+    HOST: 'localhost',
+    USER: 'root',
+    PASSWORD: 'root',
+    DB: 'register_login_sys'
 };
