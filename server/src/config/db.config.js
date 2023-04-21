@@ -8,6 +8,6 @@
 module.exports = {
     HOST: 'localhost',
     USER: 'root',
-    PASSWORD: 'root',
-    DB: 'register_login_sys'
+    PASSWORD: 'Emmanuel123',
+    DB: 'vehicleInsurance'
 };

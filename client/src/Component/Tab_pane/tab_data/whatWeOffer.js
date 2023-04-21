@@ -27,8 +27,8 @@ export default function whatweoffer(){
 
     return(
         <div>
-            <h3>What We Offer</h3>
-            <div style={{ paddingLeft: "450px", paddingTop: "10px" ,position:"relative"}}>
+            <h3 style={{textAlign:"left",color:"rgb(29, 29, 29)"}}>What We Offer</h3>
+            <div style={{ paddingLeft: "450px", paddingTop: "10px" }}>
                 <div style={{ display: "flex" }}>
                     <Cards insuranceType="Personal Insurance" img={personalInsurance}insuranceExplanation={personalInsuranceInfo} />
                     <div style={{ width: "50px" }}></div>

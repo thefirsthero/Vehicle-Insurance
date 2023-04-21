@@ -13,7 +13,7 @@ export default function Tab_Pane(){
             <Head user="Emmanuel Tsosi" />
             
             <br></br>
-            <ul class="nav nav-pills nav-stacked col-md-3">
+            <ul class="nav nav-pills nav-stacked col-md-3"style={{backgroundColor:"white"}}>
                 <li class="active"><a data-toggle="tab" href="#home">Dashboard</a></li>
                 <li><a data-toggle="tab" href="#menu1">What We Offer</a></li>
                 <hr style={{height:"2px",backgroundColor:"rgb(7, 143, 201)"}}></hr>
@@ -27,7 +27,7 @@ export default function Tab_Pane(){
                 
             </ul>
 
-            <div class="tab-content">
+            <div class="tab-content" style={{backgroundColor:"white"}}>
                 <div id="home" class="tab-pane fade in active">
                     <Dashboard/>
                 </div>

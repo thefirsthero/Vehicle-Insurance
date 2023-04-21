@@ -9,6 +9,7 @@ import Home from './Component/Home/Home';
 import SignIn from './Component/Signin/Signin';
 import SignUp from './Component/Signup/Signup';
 import FAQ from './Component/FAQ/FAQ';
+import Tab_Pane from './Component/Tab_pane/tab_pane';
 
 class App extends Component {
   render(){
@@ -20,6 +21,7 @@ class App extends Component {
             <Route exact path="/" component={SignIn}></Route>
             <Route exact path="/register" component={SignUp} ></Route>
             <Route exact path="/FAQ" component={FAQ} ></Route>
+            <Route exact path="/userdashboard" component={Tab_Pane} ></Route>
           </Switch>
         </Router>
       </div>

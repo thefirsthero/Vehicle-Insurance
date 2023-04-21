@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import Card from "../../Cards/Card2"
 import Table from "../../table/table";
 
 
