@@ -1,4 +1,4 @@
-
+CREATE DATABASE register_login_sys;
 -- Vukosi Table --
 USE register_login_sys;
 -- Table structure for table `users`
