@@ -41,14 +41,15 @@ VALUES ('John Doe', 'johndoe@example.com', '555-1234', '123 Main St', 'Los Angel
 SELECT * FROM registrations;
 
 -- Emmanuel Table --
+use register_login_sys;
 create table vehicles(VIN varchar(17) unique not Null,
 carBrand varchar(20),
 carModel varchar(25),
 carExpiry date,
 IDV float,
-userId int,
+userId bigint,
 primary key (VIN),
-foreign key(userId) references users(userID));
+foreign key(userId) references users(user_id_number));
 
 -- Mikyle Table --
 CREATE TABLE approvedpolicies (

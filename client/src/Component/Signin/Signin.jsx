@@ -26,7 +26,6 @@ const SignIn = () => {
                 if(data.message){
                     alert("Please try again");
                 } else {
-                    alert('Logged In')
                     // console.log(data.name)
                     // logic to go to admin dashboard o user dashboard:
                     console.log(data.admin_id)
@@ -34,7 +33,7 @@ const SignIn = () => {
                         history.push('/admin_dashboard'); // go to admin dashboard
                     }
                     else{
-                        history.push('/home'); // go to user dashboard
+                        history.push('/user_dashboard'); // go to user dashboard
                     }
                     sessionStorage.setItem('token', data.token);
                     // sessionStorage.setItem('name', data.name);

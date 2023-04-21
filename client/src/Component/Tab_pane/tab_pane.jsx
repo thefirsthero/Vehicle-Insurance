@@ -1,15 +1,30 @@
 
 import React from "react";
+import { useEffect, useState } from 'react'
 import "./tab_pane.css"
 import Whatweoffer from "./tab_data/whatWeOffer";
 import Dashboard from "./tab_data/dashboard";
 import Head from "../header_and_footer/header";
 import Foot from "../header_and_footer/footer";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function Tab_Pane(){
+    const history = useHistory();
+    const [token, setToken] = useState('');
+
+    useEffect(() => {
+        setToken(sessionStorage.getItem('token'));
+    });
+
+    const handleLogout = () => {
+        sessionStorage.clear();
+        history.push('/');
+    }
     return(
-        <div >
+        <>
+        {token &&
+            <div >
             <Head user="Emmanuel Tsosi" />
             
             <br></br>
@@ -18,12 +33,13 @@ export default function Tab_Pane(){
                 <li><a data-toggle="tab" href="#menu1">What We Offer</a></li>
                 <hr style={{height:"2px",backgroundColor:"rgb(7, 143, 201)"}}></hr>
                 
-                <h5>Apply for Policy</h5>
-                <Link to ='/'>
-                    <h5 onClick={()=>{
-                        localStorage.clear()
-                    }}>Log out</h5>
+                <Link to ='/policysignup'>
+                    <h5>Apply for Policy</h5>
                 </Link>
+
+                
+                <h5 onClick={handleLogout}>Log out</h5>
+                
                 
             </ul>
 
@@ -38,5 +54,16 @@ export default function Tab_Pane(){
 
             <Foot/>
     </div>
+        }
+
+        {!token &&
+                <div className="d-flex justify-content-center align-items-center login-container">
+                <div class="alert alert-warning" role="alert">
+                    <Link to='/'>Please Login</Link>
+                </div>
+                </div>
+            }
+        </>
+        
     )
 }
