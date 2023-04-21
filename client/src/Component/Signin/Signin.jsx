@@ -31,7 +31,7 @@ const SignIn = () => {
                     // logic to go to admin dashboard o user dashboard:
                     console.log(data.admin_id)
                     if(data.admin_id = 1){
-                        history.push('/home'); // go to admin dashboard
+                        history.push('/admin_dashboard'); // go to admin dashboard
                     }
                     else{
                         history.push('/home'); // go to user dashboard

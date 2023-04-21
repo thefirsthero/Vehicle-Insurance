@@ -11,6 +11,7 @@ import SignUp from './Component/Signup/Signup';
 import FAQ from './Component/FAQ/FAQ';
 import Tab_Pane from './Component/Tab_pane/tab_pane';
 import PolicySignup from './Component/Policy_Signup/PolicySignup';
+import AdminDashboard from './Component/Admin/AdminDashboard';
 
 class App extends Component {
   render(){
@@ -22,8 +23,9 @@ class App extends Component {
             <Route exact path="/" component={SignIn}></Route>
             <Route exact path="/register" component={SignUp} ></Route>
             <Route exact path="/FAQ" component={FAQ} ></Route>
-            <Route exact path="/userdashboard" component={Tab_Pane} ></Route>
+            <Route exact path="/user_dashboard" component={Tab_Pane} ></Route>
             <Route exact path="/policysignup" component={PolicySignup} ></Route>
+            <Route exact path="/admin_dashboard" component={AdminDashboard} ></Route>
           </Switch>
         </Router>
       </div>

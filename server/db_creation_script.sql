@@ -1,7 +1,6 @@
-CREATE DATABASE register_login_sys;
-USE register_login_sys;
 
--- Vukosi TABLE--
+-- Vukosi Table --
+USE register_login_sys;
 -- Table structure for table `users`
 --
 CREATE TABLE `users` (
@@ -19,7 +18,7 @@ UNIQUE KEY `user_id_UNIQUE` (`user_id_number`)
 INSERT INTO users (user_id_number, user_name, user_surname, user_email, user_password, is_admin)
 VALUES ('01012301495', 'admin', 'admin', 'admin@admin.admin', 'admin@admin.admin', 1);
 
--- Lindani Table-- 
+-- Lindani Table -- 
 CREATE TABLE registrations (
   id INT AUTO_INCREMENT PRIMARY KEY,
   Drivers_Name VARCHAR(255) NOT NULL,
@@ -41,7 +40,7 @@ VALUES ('John Doe', 'johndoe@example.com', '555-1234', '123 Main St', 'Los Angel
 
 SELECT * FROM registrations;
 
--- Emmanuel Table--
+-- Emmanuel Table --
 create table vehicles(VIN varchar(17) unique not Null,
 carBrand varchar(20),
 carModel varchar(25),
@@ -50,3 +49,18 @@ IDV float,
 userId int,
 primary key (VIN),
 foreign key(userId) references users(userID));
+
+-- Mikyle Table --
+CREATE TABLE approvedpolicies (
+  id INT PRIMARY KEY,
+  Drivers_Name VARCHAR(255) NOT NULL,
+  Email VARCHAR(255) NOT NULL,
+  Phone VARCHAR(20) NOT NULL,
+  Address VARCHAR(255) NOT NULL,
+  City VARCHAR(255) NOT NULL,
+  Car_Make VARCHAR(255) NOT NULL,
+  Car_Model VARCHAR(255) NOT NULL,
+  Vin_Number VARCHAR(17) NOT NULL,
+  coverage_options VARCHAR(255) NOT NULL,
+  Payment_information VARCHAR(255) NOT NULL
+);

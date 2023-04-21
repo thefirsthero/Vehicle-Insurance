@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
 }); // check if the server is running
 
 require("./src/routes/user.routes.js")(app); // imported routes for different requests
+require("./src/routes/admin.routes.js")(app); // imported routes for different requests
 
 app.listen(port, () => {
     console.log(`Node server running at http://localhost:${port}`)
