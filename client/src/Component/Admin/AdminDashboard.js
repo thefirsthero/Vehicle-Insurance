@@ -26,7 +26,9 @@ const AdminDashboard = () => {
   const n = localStorage.getItem('name')
   const [active, setActive] = useState(1);
   return (
-    <div className='d-flex'>
+    <>
+      {token &&
+      <div className='d-flex'>
       
       <div className='w-25'>
 
@@ -89,6 +91,16 @@ const AdminDashboard = () => {
 
 
     </div>
+    }
+
+        {!token &&
+                <div className="d-flex justify-content-center align-items-center login-container">
+                    <div class="alert alert-warning" role="alert">
+                        <Link to='/'>Please Login</Link>
+                    </div>
+                </div>
+            }
+    </>
   )
 
 
