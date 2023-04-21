@@ -16,7 +16,7 @@ import AdminDashboard from './Component/Admin/AdminDashboard';
 class App extends Component {
   render(){
     return (
-      <div className="App">
+      <div className="">
         <Router>
           <Switch>
             <Route exact path="/home" component={Home}></Route>

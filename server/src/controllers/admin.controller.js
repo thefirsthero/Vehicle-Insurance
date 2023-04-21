@@ -3,7 +3,7 @@ const mysql = require('mysql')
 const database = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'root',
+    password: 'Mikyle123',
     database: 'register_login_sys'
 })
 
@@ -58,8 +58,8 @@ exports.searchusers = (req, res) => {
 }
 
 exports.searchpolicies = (req, res) => {
-    database.query("select * from approvedpolicies where Drivers_Name = ? ",
-        [req.params.s],
+    database.query("select * from approvedpolicies where Drivers_Name = ? or Email	= ? or Phone = ? or Address = ? or City = ? or Car_Make = ? or Car_Model = ? or Vin_Number = ?	or coverage_options = ? or Payment_information = ?",
+    [req.params.s, req.params.s, req.params.s, req.params.s, req.params.s, req.params.s, req.params.s, req.params.s, req.params.s, req.params.s],
         function (err, result, fields) {
             if (err) {
                 return err
@@ -70,8 +70,8 @@ exports.searchpolicies = (req, res) => {
 }
 
 exports.searchapplications = (req, res) => {
-    database.query("select * from registrations where Drivers_Name = ? ",
-        [req.params.s],
+    database.query("select * from registrations where Drivers_Name = ? or Email	= ? or Phone = ? or Address = ? or City = ? or Car_Make = ? or Car_Model = ? or Vin_Number = ?	or coverage_options = ? or Payment_information = ?",
+        [req.params.s, req.params.s, req.params.s, req.params.s, req.params.s, req.params.s, req.params.s, req.params.s, req.params.s, req.params.s],
         function (err, result, fields) {
             if (err) {
                 return err
