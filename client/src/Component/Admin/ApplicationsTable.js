@@ -87,7 +87,7 @@ const AdminPolicies = () => {
         <div className='container-fluid p-5 column'>
             <h1>Applications</h1>
             <div className='d-flex' style={{float: 'right'}}>                
-                <input type="text" placeholder="search user name" onChange={searching} value={search}/>
+                <input type="text" placeholder="search..." onChange={searching} value={search}/>
                 <button className="btn btn-primary" onClick={searched}><Icon.Trash /></button>
                     
             </div>

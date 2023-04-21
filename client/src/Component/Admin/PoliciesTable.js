@@ -52,7 +52,7 @@ const EditPolicies = () => {
             <div className='d-flex' style={{float: 'right'}}>
                 
                 
-                <input type="text" placeholder="search user name" onChange={searching} value={search}/>
+                <input type="text" placeholder="search..." onChange={searching} value={search}/>
                 <button className="btn btn-primary" onClick={searched}><Icon.Trash /></button>
                     
             </div>
