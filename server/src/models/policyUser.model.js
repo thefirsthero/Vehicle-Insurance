@@ -7,7 +7,6 @@ const User = function (user) {
   this.user_surname = user.surname;
   this.user_email = user.email;
   this.user_password = user.password;
-  this.is_admin = 0
 };
 
 User.create = (newUser, result) => {
@@ -36,27 +35,6 @@ User.findByEmail = (reqData, result) => {
       console.log("found user: ", res[0]);
       result(null, res[0]);
       return;
-    }
-
-    // not found Customer with the id
-    result({ kind: "not_found" }, null);
-  });
-};
-
-// check if admin or not
-User.isAdmin = (reqData, result) => {
-  const { email, password } = reqData;
-  sql.query(`SELECT is_admin FROM users WHERE user_email = '${email}' AND user_password='${password}'`, (err, res) => {
-    if (err) {
-      console.log("error: ", err);
-      result(err, null);
-      return;
-    }
-
-    if (res.length) {
-      console.log("id_admin status: ", res[0]);
-      result(null, res[0]);
-      return result;
     }
 
     // not found Customer with the id

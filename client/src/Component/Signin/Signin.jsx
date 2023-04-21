@@ -27,11 +27,19 @@ const SignIn = () => {
                     alert("Please try again");
                 } else {
                     alert('Logged In')
-                    history.push('/home');
-                    console.log(data.name)
+                    // console.log(data.name)
+                    // logic to go to admin dashboard o user dashboard:
+                    console.log(data.admin_id)
+                    if(data.admin_id = 1){
+                        history.push('/home'); // go to admin dashboard
+                    }
+                    else{
+                        history.push('/home'); // go to user dashboard
+                    }
                     sessionStorage.setItem('token', data.token);
-                    sessionStorage.setItem('name', data.name);
-                    sessionStorage.setItem('email', data.email);
+                    // sessionStorage.setItem('name', data.name);
+                    // sessionStorage.setItem('email', data.email);
+                    sessionStorage.setItem('admin_id', data.admin_id)
                 }
             })
         }

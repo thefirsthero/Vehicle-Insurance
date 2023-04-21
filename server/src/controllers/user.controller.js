@@ -49,9 +49,29 @@ exports.findOne = (req, res) => {
         });
       }
     } else {
-      const { id, name, email } = data;
-      const token = jwt.sign({ data }, 'secretkey');
-      res.json({ token, id, name, email });
+      
+      User.isAdmin(signInUser, (err,data) => {
+        if(err) {
+          if (err.kind === "not_found") {
+            res.status(404).send({
+              message: `No user found with emailId ${signInUser.email}.`
+            });
+          } else {
+            res.status(500).send({
+              message: "Error retrieving user information with emailId " + signInUser.email
+            });
+          }
+        } else{
+          // can log in
+          // admin vs user logic
+          // console.log(data.is_admin) // implement it here
+          // const { id, name, email } = data;
+          const admin_id = data.is_admin
+          const token = jwt.sign({ data }, 'secretkey');
+          // res.json({ token, id, name, email })
+          res.json({token, admin_id});
+        }
+      })
     };
   });
 };
