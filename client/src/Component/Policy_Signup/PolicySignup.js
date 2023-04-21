@@ -1,9 +1,10 @@
 
-import React, { useState } from 'react'; import './form2.css';
+import React, { useState } from 'react';
+// import './PolicySignup.css'; //this css is breaking other css... why???
 import axios from 'axios';
 
 
-const Form = () => {
+const PolicySignup = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -30,7 +31,7 @@ const Form = () => {
       paymentInfo: event.target.elements.paymentInfo.value,
       VIN: event.target.elements.VIN_NUMBER.value,
     };
-    await axios.post('http://localhost:5000/api/register', formData)
+    await axios.post('http://localhost:3033/api/register', formData)
     console.log(formData);
 
     // Reset the form input fields to their initial state
@@ -206,4 +207,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default PolicySignup;

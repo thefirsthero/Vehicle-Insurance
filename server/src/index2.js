@@ -11,12 +11,12 @@ app.use(bodyParser.urlencoded({ extended: true }));    // parsing request of con
 const port = 5000;
 
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'Lindani123',
-  database: 'Car_Insurance_registration'
-});
+// const connection = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'root',
+//   password: 'Lindani123',
+//   database: 'Car_Insurance_registration'
+// });
 
 connection.connect();
 console.log('Lindai');
