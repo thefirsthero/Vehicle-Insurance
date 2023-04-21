@@ -196,7 +196,7 @@ const PolicySignup = () => {
       />
        </div>
 
-      <button type="submit" style={{color:'white'}}>Submit</button>
+      <button type="submit" style={{color:'black'}}>Submit</button>
     </form>
 
 

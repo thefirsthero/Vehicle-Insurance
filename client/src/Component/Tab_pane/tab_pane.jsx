@@ -25,7 +25,7 @@ export default function Tab_Pane(){
         <>
         {token &&
             <div >
-            <Head user="Emmanuel Tsosi" />
+            <Head user="Welcome User!" />
             
             <br></br>
             <ul class="nav nav-pills nav-stacked col-md-3"style={{backgroundColor:"white"}}>
@@ -37,17 +37,19 @@ export default function Tab_Pane(){
                     <h5>Apply for Policy</h5>
                 </Link>
 
+                <Link to ='/faq'>
+                    <h5>FAQ's</h5>
+                </Link>
                 
                 <h5 onClick={handleLogout}>Log out</h5>
                 
-                
             </ul>
 
-            <div class="tab-content" style={{backgroundColor:"white"}}>
-                <div id="home" class="tab-pane fade in active">
+            <div class="tab-content" >
+                <div id="home" class="tab-pane fade in active" style={{backgroundColor:"white", color:"black"}}>
                     <Dashboard/>
                 </div>
-                <div id="menu1" class="tab-pane fade">
+                <div id="menu1" class="tab-pane fade" style={{backgroundColor:"white"}}>
                     <Whatweoffer/>
                 </div>
             </div>

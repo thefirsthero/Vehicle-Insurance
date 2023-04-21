@@ -22,7 +22,7 @@ class App extends Component {
             <Route exact path="/home" component={Home}></Route>
             <Route exact path="/" component={SignIn}></Route>
             <Route exact path="/register" component={SignUp} ></Route>
-            <Route exact path="/FAQ" component={FAQ} ></Route>
+            <Route exact path="/faq" component={FAQ} ></Route>
             <Route exact path="/user_dashboard" component={Tab_Pane} ></Route>
             <Route exact path="/policysignup" component={PolicySignup} ></Route>
             <Route exact path="/admin_dashboard" component={AdminDashboard} ></Route>

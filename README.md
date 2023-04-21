@@ -12,6 +12,9 @@ This system helps the user to get a different kind of insurance
   * * REACT_APP_PASS=root
   * * REACT_APP_DB=login_register_sys
 
+  * Open MySQL Workbench and input the code found in `server\db_creation_script.sql` (this creates the database & populates some tables)
+
+
 # Installation
 * To install the required node modules for the backend server, navigate to server folder in cmd
   * type `npm install`
@@ -25,10 +28,11 @@ This system helps the user to get a different kind of insurance
   * type `npm start`
 
 # Potential Client npm start issues
-delete the `package-lock.json` file<br>
-run `npm i`<br>
-run `npm update`<br>
-run `npm audit fix --force`<br>
-run `npm start`
+* install referenced packages for module not found errors
+* delete the `package-lock.json` file<br>
+* * run `npm i`<br>
+* * run `npm update`<br>
+* * run `npm audit fix --force`<br>
+* * run `npm start`
   
   
