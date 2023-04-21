@@ -8,9 +8,10 @@ function Table() {
     useEffect(function(){
         async function getAllVehicles(){
             try {
-                const response = await axios.get("http://localhost:8000/userdashboard");
-                console.log(response.data);
-                setListVehicles(response.data);
+                //const response = await axios.get("/userdashboard");
+                //console.log(response.data);
+                // setListVehicles(response.data);
+                setListVehicles([]);
             } catch (error) {
                 console.log("error",error);
             }

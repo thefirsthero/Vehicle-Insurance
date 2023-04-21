@@ -2,7 +2,7 @@ import "../header_and_footer/header.css"
 import usericon from "../images/usericon.png"
 import React from "react"
 import logo from "../images/logo.png"
-import Popup from 'reactjs-popup';
+// import Popup from 'reactjs-popup';
 
 export default function Head(props){
 

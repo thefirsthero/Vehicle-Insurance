@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const User = require("../models/user.model.js");
+const mysql = require('mysql2');
 
 // Create and Save a new User
 exports.create = (req, res) => {
@@ -66,3 +67,12 @@ exports.findAll = (req, res) => {
     else res.send(data);
   });
 };
+
+exports.selectVehicles = (req,res) => {
+  console.log(req.params.empid);
+  connection.query("select * from users inner join vehicles on users.userId= vehicles.userId where users.userId = ?",1999,
+  function(error,results,fields){
+      if(error) throw error;
+      return res.end(JSON.stringify(results));
+  });
+} ;
